@@ -10,7 +10,9 @@ pipeline {
  }
  stage('Test') {
  steps {
+ withMaven(maven : 'M2_HOME') {
  bat 'mvn test'
+ }
  }
  }
  }
